@@ -1,0 +1,57 @@
+body {
+	font-size: 80%;
+	font-family: "Courier New", Courier, monospace;
+	letter-spacing: 0.15em;
+	border-style: double;
+	width: 940px;
+	min-width: 720px;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+#page {
+	text-align: center;
+}
+
+#logo {
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+li {
+	list-style-type: none;
+    display: inline-block;
+	font-size: 16px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	
+}
+
+#navigation {
+	border-top: solid 3px black;
+	border-bottom: solid 2px black;
+	width: 570px;
+	margin-left: 165px;
+	margin-bottom: 20px;
+}
+
+a:link {
+    text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+}
+
+a:hover {
+    color: red;
+}
+
+.on {
+    color: red;
+}
+
+p:nth-child(4) {
+	margin-right: 150px;
+	margin-left: 150px;
+	padding: 10px;
+}
