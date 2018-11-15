@@ -4,7 +4,7 @@
 	UMass Lowell Computer Science
 	COMP.4610 GUI Programming 1
 
-	Page containing links to homework assignments
+	HW6 - JavaScript Multiplication Table
 -->
 
 <!doctype html>
@@ -15,11 +15,11 @@
 	<meta name="description" content="GUI1">
 	<meta name="author" content="Hunter Phipps">
 
-	<title>Hunter Phipps inClass4</title>
+	<title>Hunter Phipps HW6</title>
 
 	<!-- CSS -->
-	<link href="../../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../../css/style1.css" rel="stylesheet">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/style1.css" rel="stylesheet">
 </head>
 <body class="text-center">
 
@@ -37,7 +37,7 @@
 				<nav class="nav nav-masthead justify-content-center">
 					<a class="nav-link" href="../../index.html">Home</a>
 					<a class="nav-link" href="../../about.html">About</a>
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Projects
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -45,10 +45,10 @@
 						<a class="dropdown-item" href="../inClass1/index.html">Exercise 1</a>
 						<a class="dropdown-item" href="../inClass2/index.html">Exercise 2</a>
 						<a class="dropdown-item" href="../inClass3/index.html">Exercise 3</a>
-						<a class="dropdown-item active" href="#">Exercise 4</a>
+						<a class="dropdown-item" href="../inClass4/index.html">Exercise 4</a>
 						<a class="dropdown-item" href="../inClass5/index.html">Exercise 5</a>
 						<a class="dropdown-item" href="../inClass6/index.html">Exercise 6</a>
-						<a class="dropdown-item" href="../hw6/index.html">Homework 6</a>
+						<a class="dropdown-item active" href="#">Homework 6</a>
 					</div>
 				</nav>
 			</div>
@@ -56,23 +56,41 @@
 
 		<!-- Main text -->
 		<main class="inner cover">
-			<div><h2><a href="./1/index.html">Exercise 1</a></h2></div>
-			<div><h2><a href="./2/index.html">Exercise 2</a></h2></div>
+			<form onsubmit="return false">
+				<label>Minimum Column Number: </label>
+				<input type="number" name="column start" id="cStart" value="1"><br/>
+
+				<label>Maximum Column Number: </label>
+				<input type="number" name="column end" id="cEnd" value="5"><br/>
+
+				<label>Minimum Row Number: </label>
+				<input type="number" name="row start" id="rStart" value="1"><br/>
+
+				<label>Maximum Row Number: </label>
+				<input type="number" name="row end" id="rEnd" value="5"><br/><br/>
+
+				<input type="submit" value="Submit " onclick="return calcTable()">
+			</form>
+
+			<br/>
 		</main>
+
+		<div id="multTable"></div>
 
 		<!-- Footer -->
 		<footer class="mastfoot mt-auto">
 			<div class="inner">
-				<p>Hunter Phipps &copy; 9/16/2018</p>
+				<br/><p>Hunter Phipps &copy; 11/14/2018</p>
 			</div>
 		</footer>
 	</div>
 
 	<!-- JavaScript -->
-	<script src="../../js/jquery-3.3.1.min.js"></script>
-	<script src="../../js/popper.min.js"></script>
-	<script src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/particles.min.js"></script>
-
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/particles.min.js"></script>
+	<script>particlesJS.load("particles", './js/particlesjs-config.json');</script>
+	<script type='text/javascript' src="./js/table.js"></script>
 </body>
 </html>
