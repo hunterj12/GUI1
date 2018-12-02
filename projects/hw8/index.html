@@ -4,7 +4,7 @@
 	UMass Lowell Computer Science
 	COMP.4610 GUI Programming 1
 
-	HW7 - JavaScript Multiplication Table
+	HW8 - JavaScript Multiplication Table v3
 -->
 
 <!doctype html>
@@ -15,10 +15,12 @@
 	<meta name="description" content="GUI1">
 	<meta name="author" content="Hunter Phipps">
 
-	<title>Hunter Phipps HW7</title>
+	<title>Hunter Phipps HW8</title>
 
 	<!-- CSS -->
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="./css/jquery-ui.theme.min.css" rel="stylesheet">-->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
 	<link href="./css/style1.css" rel="stylesheet">
 </head>
 <body class="text-center">
@@ -50,8 +52,8 @@
 						<a class="dropdown-item" href="../inClass6/index.html">Exercise 6</a>
 						<a class="dropdown-item" href="../inClass7/index.html">Exercise 7</a>
 						<a class="dropdown-item" href="../hw6/index.html">Homework 6</a>
-						<a class="dropdown-item active" href="#">Homework 7</a>
-						<a class="dropdown-item" href="../hw8/index.html">Homework 8</a>
+						<a class="dropdown-item" href="../hw7/index.html">Homework 7</a>
+						<a class="dropdown-item active" href="#">Homework 8</a>
 					</div>
 				</nav>
 			</div>
@@ -61,29 +63,34 @@
 		<main class="inner cover">
 			<form id="mult_form" name="mult_form" method="GET">
 				<label>Minimum Column Number: </label>
-				<input type="number" id="cStart" name="cStart" value="" required><br/>
+				<input type="number" id="cStart" name="cStart" value="0" required>
+				<div id="slider_cStart"></div><br/>
 
 				<label>Maximum Column Number: </label>
-				<input type="number" id="cEnd" name="cEnd" value="" required><br/>
+				<input type="number" id="cEnd" name="cEnd" value="0" required>
+				<div id="slider_cEnd"></div><br/>
 
 				<label>Minimum Row Number: </label>
-				<input type="number" id="rStart" name="rStart" value="" required><br/>
+				<input type="number" id="rStart" name="rStart" value="0" required>
+				<div id="slider_rStart"></div><br/>
 
 				<label>Maximum Row Number: </label>
-				<input type="number" id="rEnd" name="rEnd" value="" required><br/><br/>
+				<input type="number" id="rEnd" name="rEnd" value="0" required>
+				<div id="slider_rEnd"></div><br/>
 
-				<input id="button_submit" class="submit_button" type="submit" value="Generate Table">
+				<input id="button_submit" class="submit_button" type="submit" onClick="saveTab();" value="Save Table">
 			</form>
 
 			<br/><div id="warning"></div><br/>
 		</main>
 
 		<div id="multTable"></div>
+		<div id="tabs"><ul></ul></div>
 
 		<!-- Footer -->
 		<footer class="mastfoot mt-auto">
 			<div class="inner">
-				<br/><p>Hunter Phipps &copy; 11/23/2018</p>
+				<br/><p>Hunter Phipps &copy; 12/1/2018</p>
 			</div>
 		</footer>
 	</div>
@@ -93,6 +100,7 @@
 	<script src="./js/jquery-3.3.1.min.js"></script>
 	<script src="./js/jquery.validate.min.js"></script>
 	<script src="./js/additional-methods.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
 	<script src="./js/popper.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/particles.min.js"></script>
