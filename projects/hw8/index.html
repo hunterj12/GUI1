@@ -19,8 +19,7 @@
 
 	<!-- CSS -->
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
-	<!--<link href="./css/jquery-ui.theme.min.css" rel="stylesheet">-->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
+	<link href="./css/jquery-ui.min.css" rel="stylesheet">
 	<link href="./css/style1.css" rel="stylesheet">
 </head>
 <body class="text-center">
@@ -63,19 +62,19 @@
 		<main class="inner cover">
 			<form id="mult_form" name="mult_form" method="GET">
 				<label>Minimum Column Number: </label>
-				<input type="number" id="cStart" name="cStart" value="0" required>
+				<input type="number" id="cStart" name="cStart" value="0" required><br/>
 				<div id="slider_cStart"></div><br/>
 
 				<label>Maximum Column Number: </label>
-				<input type="number" id="cEnd" name="cEnd" value="0" required>
+				<input type="number" id="cEnd" name="cEnd" value="0" required><br/>
 				<div id="slider_cEnd"></div><br/>
 
 				<label>Minimum Row Number: </label>
-				<input type="number" id="rStart" name="rStart" value="0" required>
+				<input type="number" id="rStart" name="rStart" value="0" required><br/>
 				<div id="slider_rStart"></div><br/>
 
 				<label>Maximum Row Number: </label>
-				<input type="number" id="rEnd" name="rEnd" value="0" required>
+				<input type="number" id="rEnd" name="rEnd" value="0" required><br/>
 				<div id="slider_rEnd"></div><br/>
 
 				<input id="button_submit" class="submit_button" type="submit" onClick="saveTab();" value="Save Table">
@@ -84,8 +83,8 @@
 			<br/><div id="warning"></div><br/>
 		</main>
 
-		<div id="multTable"></div>
-		<div id="tabs"><ul></ul></div>
+		<div id="multTable"></div><br/>
+		<div id="tabs"><ul></ul></div><br/>
 
 		<!-- Footer -->
 		<footer class="mastfoot mt-auto">
